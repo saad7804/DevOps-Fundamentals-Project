@@ -1,0 +1,50 @@
+========================================
+       LINUX LOG MONITORING REPORT
+========================================
+
+1. Failed Login Attempts
+----------------------------------------
+Jul 19 16:12:15 ip-10-0-0-9 sudo[21217]: ubuntu : TTY=/dev/pts/1 ; PWD=/home/ubuntu/DevOpsMiniProject ; USER=root ; COMMAND=/usr/bin/grep -i failed password /var/log/auth.log
+
+2. SSH Login Activity
+----------------------------------------
+Jul 19 15:40:52 ip-10-0-0-9 sshd-session[20787]: error: maximum authentication attempts exceeded for ubuntu from 112.185.16.157 port 60244 ssh2 [preauth]
+Jul 19 15:40:52 ip-10-0-0-9 sshd-session[20787]: Disconnecting authenticating user ubuntu 112.185.16.157 port 60244: Too many authentication failures [preauth]
+Jul 19 15:41:08 ip-10-0-0-9 sshd-session[20798]: Received disconnect from 112.185.16.157 port 60710:11: disconnected by user [preauth]
+Jul 19 15:41:08 ip-10-0-0-9 sshd-session[20798]: Disconnected from authenticating user ubuntu 112.185.16.157 port 60710 [preauth]
+Jul 19 15:41:17 ip-10-0-0-9 sshd-session[20800]: Invalid user pi from 112.185.16.157 port 32824
+Jul 19 15:41:22 ip-10-0-0-9 sshd-session[20800]: Received disconnect from 112.185.16.157 port 32824:11: disconnected by user [preauth]
+Jul 19 15:41:22 ip-10-0-0-9 sshd-session[20800]: Disconnected from invalid user pi 112.185.16.157 port 32824 [preauth]
+Jul 19 15:41:30 ip-10-0-0-9 sshd-session[20810]: Invalid user baikal from 112.185.16.157 port 33182
+Jul 19 15:41:31 ip-10-0-0-9 sshd-session[20810]: Received disconnect from 112.185.16.157 port 33182:11: disconnected by user [preauth]
+Jul 19 15:41:31 ip-10-0-0-9 sshd-session[20810]: Disconnected from invalid user baikal 112.185.16.157 port 33182 [preauth]
+
+3. System Errors
+----------------------------------------
+Jul 19 15:37:45 ip-10-0-0-9 sshd-session[20750]: error: maximum authentication attempts exceeded for invalid user user from 112.185.16.157 port 55452 ssh2 [preauth]
+Jul 19 15:37:59 ip-10-0-0-9 sshd-session[20752]: error: maximum authentication attempts exceeded for invalid user user from 112.185.16.157 port 55834 ssh2 [preauth]
+Jul 19 15:38:27 ip-10-0-0-9 sshd-session[20761]: error: maximum authentication attempts exceeded for invalid user ftpuser from 112.185.16.157 port 56524 ssh2 [preauth]
+Jul 19 15:38:43 ip-10-0-0-9 sshd-session[20763]: error: maximum authentication attempts exceeded for invalid user ftpuser from 112.185.16.157 port 56914 ssh2 [preauth]
+Jul 19 15:39:13 ip-10-0-0-9 sshd-session[20767]: error: maximum authentication attempts exceeded for invalid user test1 from 112.185.16.157 port 57704 ssh2 [preauth]
+Jul 19 15:39:27 ip-10-0-0-9 sshd-session[20769]: error: maximum authentication attempts exceeded for invalid user test1 from 112.185.16.157 port 58092 ssh2 [preauth]
+Jul 19 15:39:54 ip-10-0-0-9 sshd-session[20773]: error: maximum authentication attempts exceeded for invalid user test2 from 112.185.16.157 port 58718 ssh2 [preauth]
+Jul 19 15:40:08 ip-10-0-0-9 sshd-session[20775]: error: maximum authentication attempts exceeded for invalid user test2 from 112.185.16.157 port 59132 ssh2 [preauth]
+Jul 19 15:40:35 ip-10-0-0-9 sshd-session[20785]: error: maximum authentication attempts exceeded for ubuntu from 112.185.16.157 port 59816 ssh2 [preauth]
+Jul 19 15:40:52 ip-10-0-0-9 sshd-session[20787]: error: maximum authentication attempts exceeded for ubuntu from 112.185.16.157 port 60244 ssh2 [preauth]
+
+4. Warning Messages
+----------------------------------------
+Jul 19 15:37:59 ip-10-0-0-9 sshd-session[20752]: error: maximum authentication attempts exceeded for invalid user user from 112.185.16.157 port 55834 ssh2 [preauth]
+Jul 19 15:38:27 ip-10-0-0-9 sshd-session[20761]: error: maximum authentication attempts exceeded for invalid user ftpuser from 112.185.16.157 port 56524 ssh2 [preauth]
+Jul 19 15:38:43 ip-10-0-0-9 sshd-session[20763]: error: maximum authentication attempts exceeded for invalid user ftpuser from 112.185.16.157 port 56914 ssh2 [preauth]
+Jul 19 15:39:13 ip-10-0-0-9 sshd-session[20767]: error: maximum authentication attempts exceeded for invalid user test1 from 112.185.16.157 port 57704 ssh2 [preauth]
+Jul 19 15:39:27 ip-10-0-0-9 sshd-session[20769]: error: maximum authentication attempts exceeded for invalid user test1 from 112.185.16.157 port 58092 ssh2 [preauth]
+Jul 19 15:39:54 ip-10-0-0-9 sshd-session[20773]: error: maximum authentication attempts exceeded for invalid user test2 from 112.185.16.157 port 58718 ssh2 [preauth]
+Jul 19 15:40:08 ip-10-0-0-9 sshd-session[20775]: error: maximum authentication attempts exceeded for invalid user test2 from 112.185.16.157 port 59132 ssh2 [preauth]
+Jul 19 15:40:35 ip-10-0-0-9 sshd-session[20785]: error: maximum authentication attempts exceeded for ubuntu from 112.185.16.157 port 59816 ssh2 [preauth]
+Jul 19 15:40:52 ip-10-0-0-9 sshd-session[20787]: error: maximum authentication attempts exceeded for ubuntu from 112.185.16.157 port 60244 ssh2 [preauth]
+Jul 19 15:41:09 ip-10-0-0-9 kernel: ena 0000:00:05.0: Type was not set for devlink port.
+
+========================================
+Report generated on: Sun Jul 19 16:22:21 UTC 2026
+========================================
