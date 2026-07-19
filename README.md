@@ -20,3 +20,4 @@ This project demonstrates DevOps fundamentals using AWS EC2, Ubuntu Linux, Apach
 - apache-monitor.sh
 - backup.sh
 - log-report.txt
+Project completed successfully.
