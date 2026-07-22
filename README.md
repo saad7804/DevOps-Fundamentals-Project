@@ -1,51 +1,100 @@
 # DevOps Fundamentals Project
 
 ## Project Overview
-This project demonstrates the implementation of DevOps fundamentals using AWS, Ubuntu Linux, Apache Web Server, Git, GitHub, Bash scripting, and Linux log monitoring.
+
+This project demonstrates the implementation of a complete DevOps workflow using AWS Cloud, Ubuntu Linux, Git & GitHub, Apache Web Server, Bash Scripting, and Linux Log Monitoring.
+
+The project includes AWS infrastructure setup, Linux server configuration, website deployment, automation scripts, log monitoring, and version control using GitHub.
 
 ---
 
 ## AWS Architecture
-- AWS EC2 Ubuntu Instance
-- Custom VPC
-- Public Subnet
+
+The AWS infrastructure consists of:
+
+- Custom VPC (project_vpc)
+- Public Subnet (sub01)
 - Internet Gateway
 - Route Table
-- Security Group
+- Security Group (project_sg1)
+- Ubuntu EC2 Instance
 - Apache Web Server
 
 ---
 
 ## Installation Steps
 
-1. Launch an Ubuntu EC2 instance.
-2. Connect to the instance using SSH.
-3. Update the system:
-   ```bash
-   sudo apt update
-   sudo apt upgrade -y
-   ```
-4. Install Git, Apache2, Curl and Vim.
-5. Deploy the website in `/var/www/html`.
-6. Configure Git and connect to GitHub.
-7. Create Bash scripts.
-8. Monitor Linux system logs.
+### 1. Launch AWS Infrastructure
 
----
+- Create a Custom VPC
+- Create a Public Subnet
+- Attach Internet Gateway
+- Configure Route Table
+- Create Security Group
+- Launch Ubuntu EC2 Instance
 
-## Commands Used
+### 2. Configure Ubuntu Server
 
 ```bash
 sudo apt update
 sudo apt upgrade -y
 sudo apt install git apache2 curl vim -y
-sudo systemctl start apache2
-sudo systemctl enable apache2
+```
+
+### 3. Deploy Website
+
+Copy the website to Apache Web Root.
+
+```bash
+sudo cp index.html /var/www/html/
+```
+
+Restart Apache.
+
+```bash
+sudo systemctl restart apache2
+```
+
+### 4. Git & GitHub
+
+Initialize Git Repository
+
+```bash
 git init
 git add .
 git commit -m "Initial Commit"
-git checkout -b dev
-git merge dev
+git push origin master
+```
+
+---
+
+## Commands Used
+
+### System Update
+
+```bash
+sudo apt update
+sudo apt upgrade -y
+```
+
+### Package Installation
+
+```bash
+sudo apt install git apache2 curl vim -y
+```
+
+### Apache
+
+```bash
+sudo systemctl status apache2
+```
+
+### Git
+
+```bash
+git init
+git add .
+git commit -m "Completed DevOps Fundamentals Project"
 git push origin master
 ```
 
@@ -54,35 +103,46 @@ git push origin master
 ## Folder Structure
 
 ```
-DevOpsMiniProject/
+DevOps-Fundamentals-Project/
 │
-├── index.html
 ├── README.md
+├── index.html
+├── health-check.sh
+├── apache-monitor.sh
+├── backup.sh
 ├── log-report.txt
-├── scripts/
-│   ├── health-check.sh
-│   ├── apache-monitor.sh
-│   └── backup.sh
+│
+├── screenshots/
+│   ├── 01-AWS-Console-Home.png
+│   ├── 02-VPC-Resource-Map.png
+│   ├── ...
+│   └── 27-GitHub-Repository-Structure.png
+│
+└── documentation/
+    └── Project_Report.pdf
 ```
 
 ---
 
 ## Challenges Faced
 
-- Apache installation issue due to outdated package list.
-- GitHub authentication required a Personal Access Token (PAT).
-- Managing Git branches and merging changes.
-- Understanding Linux log monitoring commands.
+- Configuring AWS networking correctly
+- Connecting to EC2 using SSH
+- GitHub authentication using Personal Access Token
+- Resolving Git push conflicts
+- Organizing project files according to the required structure
 
 ---
 
 ## Learning Outcomes
 
-- Created AWS infrastructure.
-- Installed and configured Apache Web Server.
-- Hosted a website on Ubuntu.
-- Learned Git and GitHub version control.
-- Developed Bash automation scripts.
-- Performed Linux log monitoring and troubleshooting.
-- Understood basic DevOps workflow.
+- Created AWS infrastructure using VPC and EC2
+- Configured Ubuntu Linux server
+- Installed and managed Apache Web Server
+- Used Git and GitHub for version control
+- Developed Bash automation scripts
+- Performed Linux log monitoring and troubleshooting
+- Deployed a website on AWS successfully
+
+---
 
